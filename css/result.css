@@ -1,0 +1,277 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+}
+body {
+    background-color: #1F150C;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+body {
+    overflow: auto;
+}
+
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 4em;
+    max-width: 720px;
+    overflow: hidden;
+}
+section {
+    position: relative;
+    height: inherit;
+    padding: 1rem;
+}
+
+/* result */
+.artwork {
+    position: relative;
+    padding-top: 4em;
+    text-align: center;
+}
+.artwork h1 {
+    font-size: 1.4em;
+    margin: 1em 0;
+}
+.artwork .bulb {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(/img/bg/bulb.png);
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: contain;
+    height: 5em;
+    width: 100%;
+    transform: translateY(-2em);
+}
+.artwork .img_bg {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 50%;
+    background-image: url(/img/bg/brick-wall.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -99;
+}
+.artwork .img_wrap.active .img_bg {
+    opacity: 0;
+    display: none;
+}
+.artwork .img_wrap {
+    width: 100%;
+    margin-bottom: 3em;
+    padding-bottom: 2em;
+}
+.artwork .img_wrap.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-color: hsla(28, 44%, 8%, 0.9);
+    transition: .2s;
+    z-index: 99;
+
+}
+.artwork .img_wrap img {
+    width: 100%;
+    border-radius: 10px;
+    
+}
+.artwork .img_wrap.active img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+}
+
+
+.paper {
+    position: relative;
+    padding: 3em 2em;
+    background-color: rgb(255, 247, 228);
+    background-image: url(/img/bg/paper.png);
+    border-radius: 10px;
+    color: rgb(45, 6, 6);
+}
+.paper .corner {
+    position: absolute;
+    background-image: url(/img/bg/corner.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: .5em;
+    width: 25%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.paper .corner.left-top {
+    left: 0;
+    top: 0;
+}
+.paper .corner.right-top {
+    left: inherit;
+    right: 0;
+    top: 0;
+    transform: scaleX(-1);
+}
+.paper .corner.left-bottom {
+    left: 0;
+    top: inherit;
+    bottom: 0;
+    transform: scaleY(-1);
+}
+.paper .corner.right-bottom {
+    left: inherit;
+    top: inherit;
+    right: 0;
+    bottom: 0;
+    transform: scale(-1, -1);
+}
+
+.paper .title {
+    text-align: center;
+    color: rgb(226, 153, 16);
+}
+.paper h2 {
+    font-size: 2em;
+    font-weight: 700;
+}
+.paper h3 {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: .8em;
+    margin: 1em;
+}
+
+.paper ul {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 3em;
+    margin: 2em 0;
+}
+.paper li .keyword {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-bottom: .4em;
+}
+.paper li hr {
+    border: none;
+    border-top: 3px dotted rgb(120, 80, 11);
+    height: 1px;
+    flex: 1;
+    margin: 0 .4em;
+}
+.paper li p {
+    line-height: 1.4em;
+}
+
+
+.artist h1 {
+    text-align: center;
+    font-size: 1.4em;
+}
+.artist_info {
+    display: flex;
+    flex-flow: column wrap;
+    color: #fff;
+}
+.artist_info .img_wrap {
+    width: 100%;
+    margin: 1em 0;
+}
+.artist_info .img_wrap img {
+    display: block;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.artist_info .artist_desc h2 {
+    font-size: 1.2em;
+    font-weight: 600;
+    text-align: center;
+}
+.artist_info .artist_desc h3 {
+    text-align: center;
+    margin-top: .6em;
+    margin-bottom: 1em;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: .8em;
+}
+.artist_info .artist_desc p {
+    line-height: 1.4em;
+}
+.artist_info .artist_links {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 1em;
+    margin: 1em 0;
+}
+.artist_info .artist_links button {
+    width: 3.5em;
+    height: 3.5em;
+    padding: .65em;
+}
+.artist_info .artist_links button img {
+    width: 100%;
+    height: 100%;
+}
+
+.artist_other-work {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 0 2rem;
+}
+
+
+.share {
+    text-align: center;
+    background-image: url(/img/bg/brick-wall.jpg);
+    background-size: cover;
+}
+.share h1 {
+    font-size: 1.4em;
+    margin-bottom: 1em;
+}
+.share .share_btns {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 1em;
+}
+.share .share_btns button {
+    width: 3.5em;
+    height: 3.5em;
+    padding: .65em;
+}
+.share .share_btns button img {
+    width: 100%;
+}
+.share .test_menu {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1em;
+    padding: 2rem;
+}
+.share .banzia {
+    font-size: .8em;
+    font-weight: 800;
+    color: #ffd06b;
+}

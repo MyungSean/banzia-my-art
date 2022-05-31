@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+:root {
+    --ad-bottom-height: 50px;
+    --max-width: 720px;
+}
+
+* {
+    font-family: 'Noto Sans KR', sans-serif;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+body {
+    background-color: #1F150C;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+body.overflow-hidden {
+    overflow: hidden;
+}
+body > .wrap > .content {
+    flex-grow: 1;
+    height: calc(100vh - var(--ad-bottom-height));
+}
+/* 광고 */
+.ad-bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    max-width: var(--max-width);
+    background-color: #1F150C;
+}
+.bottom-cover {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    max-width: var(--max-width);
+    background-color: #1F150C;
+}
+
+header {
+    height: 100%;
+}
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+}
+.sections {
+    height: 100%;
+}
+section {
+    position: relative;
+    height: 100%;
+}
+section:last-child {
+    height: 100vh;
+}
+
+.neon_text {
+    color: rgb(255, 255, 238);
+    text-shadow: 0px 0px 10px rgba(255,167,0, 1);
+}
+.neon_btn {
+    background-color: transparent;
+    border: 2px solid rgb(255, 255, 238);
+    box-shadow: 0px 0px 10px rgba(255,167,0),  0px 0px 10px rgba(255,167,0) inset;
+    border-radius: 200px;
+    padding: .4em 3em;
+    font-size: 1em;
+    backdrop-filter: blur(2px);
+}
+.neon_img {
+    border: 2px solid rgb(255, 255, 238);
+    box-shadow: 0px 0px 10px rgba(255,167,0),  0px 0px 10px rgba(255,167,0) inset;
+    border-radius: 20px;
+}
+
+
+@keyframes blink{
+    0% {opacity: .6;}
+    10% {opacity: .8;}
+    30% {opacity: .7;}
+    40% {opacity: .9;}
+    5% {opacity: .8;}
+    60% {opacity: .6;}
+    80% {opacity: .7;}
+    100% {opacity: 1;}
+}
+
+
+.bgm_ctrl {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    height: 2.4em;
+    width: 2.4em;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    transition: .5s;
+    cursor: pointer;
+    opacity: .8;
+    z-index: 9;
+}
+.bgm_ctrl.hide {
+    opacity: 0;
+}
+.bgm_ctrl span {
+    font-size: 2.2em;
+}
+.bgm_ctrl #bgm-on {
+    display: none;
+}
+.bgm_ctrl.bgm-on #bgm-on {
+    display: block;
+}
+.bgm_ctrl.bgm-on #bgm-off {
+    display: none;
+}
+
+
+/* 시작화면 */
+header {
+    display: flex;
+    flex-flow: column nowrap;
+    background-image: url(/img/bg/brick-wall.jpg);
+    background-size: contain;
+    /* padding: 4em; */
+}
+.title {
+    text-align: center;
+}
+.title h1 {
+    font-size: 2em;
+    font-weight: 800;
+    margin-top: 5em;
+    /* animation: blink .8s ease infinite alternate; */
+}
+.title h2 {
+    font-size: 1em;
+    font-weight: 200;
+    line-height: 1.3em;
+    word-break: keep-all;
+    max-width: 50%;
+    margin: 1em auto;
+}
+.start {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    margin-top: auto;
+    margin-bottom: 4em;
+    text-align: center;
+}
+.start a {
+    text-decoration: none;
+}
+.start button {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    font-size: 1.4em;
+    font-weight: 600;
+    padding: .6em;
+    cursor: pointer;
+}
+.start .participants {
+    color: #fff;
+    margin: 1em 0;
+}
+.start .banzia {
+    font-size: 1em;
+    font-weight: 800;
+    color: #ffd06b;
+    margin-top: 1em;
+}
+
+/* 테스트 질문 */
+.content .img_wrap {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.content .img_wrap img {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.q,
+.d {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.4em;
+    padding-top: 40%;
+    color: #fff;
+    text-align: center;
+    background: linear-gradient(0deg, rgba(0,0,0,0.8) 10%, rgba(255,255,255,0) 100%);
+}
+.q * {
+    transition: .4s;
+}
+.q p,
+.d p {
+    font-size: 1.1em;
+    font-weight: 100;
+    line-height: 1.4em;
+    word-break: keep-all;
+}
+.q h2 {
+    font-size: 1.4em;
+    margin: 1.4em 0;
+}
+.q ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+.q ul li div {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+    height: 5em;
+    padding: 1em;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 200;
+    line-height: 1.4em;
+    word-break: keep-all;
+}
+.q.img ul li div {
+    height: auto;
+    padding: 0;
+    overflow: hidden;
+}
+.q.img ul li div img {
+    width: 100%;
+}
+.d .move-to-next {
+    padding: 5em 0;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+
+.menu {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    -ms-user-select: none; 
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.menu .viewport {
+    height: 100%;
+    width: 100%;
+    /* overflow: hidden; */
+    overflow: scroll;
+}
+.menu .content {
+    padding: 50vh 1em 20vh 1em;
+}
+.menu .content > div {
+    position: relative;
+    background-color: rgb(255, 247, 228);
+    background-image: url(/img/bg/paper.png);
+    background-color: #1F150C;
+    color: rgb(45, 6, 6);
+    -webkit-box-shadow: 0px 0px 18px 5px rgba(0,0,0,0.7); 
+    box-shadow: 0px 0px 18px 5px rgba(0,0,0,0.7);
+    border-radius: 10px;
+    text-align: left;
+    padding: 1em;
+}
+.menu .corner {
+    position: absolute;
+    background-image: url(/img/bg/corner.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: .5em;
+    width: 20%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+.menu .corner.left-top {
+    left: 0;
+    top: 0;
+}
+.menu .corner.right-top {
+    left: inherit;
+    right: 0;
+    top: 0;
+    transform: scaleX(-1);
+}
+.menu .corner.left-bottom {
+    left: 0;
+    top: inherit;
+    bottom: 0;
+    transform: scaleY(-1);
+}
+.menu .corner.right-bottom {
+    left: inherit;
+    top: inherit;
+    right: 0;
+    bottom: 0;
+    transform: scale(-1, -1);
+}
+.menu .menu_title {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+}
+.menu h2 {
+    font-size: 3.2em;
+    margin-top: .6em;
+}
+.menu h2 span {
+    color: #cf6d18;
+}
+.menu h3 {
+    font-size: 1.4em;
+    margin: .4em;
+}
+.menu p {
+    margin: 1em;
+}
+.menu .content li {
+    display: flex;
+    flex-flow: row nowrap;
+    color: #1F150C;
+    padding: 1em 0;
+    font-size: 1em;
+    line-height: 1.4em;
+}
+.menu button {
+    display: block;
+    margin: 2em auto;
+    border: 2px solid #1F150C;
+    border-radius: 5px;
+    background-color: transparent;
+    font-size: 1em;
+    padding: .4em 2em;
+}
+
+
+/* 결과 기다리기 */
+.wait_bg {
+    width: 100%;
+    height: 100%;
+    background-image: url(/img/bg/brick-wall.jpg);
+    background-size: contain;
+}
+.wait_bg .filter {
+    width: 100%;
+    height: 100%;
+    backdrop-filter: brightness(60%);
+}
+.wait_text {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    font-size: 1.4em;
+    font-weight: 200;
+    animation: blink 1s ease infinite alternate;
+}
+
+
+/* submit */
+#submit {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+#scrollLock,
+#scrollLockk {
+    position: fixed;
+    left: 0;
+    top: 40px;
+    z-index: 999;
+}
+

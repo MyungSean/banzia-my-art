@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나를 위한 작품은?</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/result.css">
+</head>
+<body>
+    <header></header>
+    <main>
+        <section class="work">
+            <div class="work_wrap">
+                <div class="artwork">
+                    <div class="bulb"></div>
+                    <h1 class="neon_text">당신을 위한 예술은?</h1>
+                    <div class="img_wrap">
+                        <img src="" alt="artwork" class="neon_img">
+                        <div class="img_bg"></div>
+                    </div>
+                </div>
+                <div class="desc_wrap">
+                    <div class="paper">
+                        <div class="desc">
+                            <div class="title">
+                                <h2></h2>
+                                <h3></h3>
+                            </div>
+                            <ul>
+                                <!-- <li>
+                                    <div class="keyword">
+                                        <h4>Hug</h4>
+                                        <hr>
+                                        <span>🧡</span>
+                                    </div>
+                                    <p>피부가 벗겨진 채 껴 안고있는 두 존재, 그리고 그것을 바라보는 관람객까지 그 가엾은 존재들에 흡수되다.</p>
+                                </li> -->
+                            </ul>
+                        </div>
+                        <div class="paper_bg">
+                            <div class="corner left-top"></div>
+                            <div class="corner right-top"></div>
+                            <div class="corner left-bottom"></div>
+                            <div class="corner right-bottom"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="artist">
+            <div class="artist_wrap">
+                <div>
+                    <h1 class="neon_text">아티스트</h1>
+                    <div class="artist_info">
+                        <div class="img_wrap">
+                            <img src="" alt="artist" class="neon_img">
+                        </div>
+                        <div class="artist_desc">
+                            <h2></h2>
+                            <h3></h3>
+                            <p></p>
+                            <div class="artist_links">
+                                <!-- <button class="neon_btn">
+                                    <img src="/img/icon/instagram-icon.png" class="sns">
+                                </button> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="artist_other-work">
+                        <button class="neon_btn"><span class="neon_text">아티스트의 다른 작품 보기</span></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="share">
+            <div class="share_wrap">
+                <div class="share_content">
+                    <div class="share_result">
+                        <h1 class="neon_text">결과 공유</h1>
+                        <div class="share_btns">
+                            <button id="share_kakao" class="neon_btn"><img src="/img/icon/kakaotalk-icon.png"></button>
+                            <button id="share_instagram" class="neon_btn"><img src="/img/icon/instagram-icon.png"></button>
+                            <button id="share_facebook" class="neon_btn"><img src="/img/icon/facebook-icon.png"></button>
+                            <button id="share_twitter" class="neon_btn"><img src="/img/icon/twitter-icon.png"></button>
+                            <button id="share_link" class="neon_btn"><img src="/img/icon/link-icon.png"></button>
+                        </div>
+                    </div>
+                    <div class="test_menu">
+                        <!-- <button class="neon_btn"><span class="neon_text">다시하기</span></button> -->
+                        <a href="/"><button class="neon_btn"><span class="neon_text">처음으로 돌아가기</span></button></a>
+                    </div>
+                </div>
+                <div class="banzia">
+                    <p>Banzia Company</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        // url parameter 가져오기
+        var getUrlParameter = function getUrlParameter(sParam) {
+            var sPageURL = window.location.search.substring(1),
+                sURLVariables = sPageURL.split('&'),
+                sParameterName,
+                i;
+
+            for (i = 0; i < sURLVariables.length; i++) {
+                sParameterName = sURLVariables[i].split('=');
+
+                if (sParameterName[0] === sParam) {
+                    return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+                }
+            }
+            return false;
+        };
+        artId = getUrlParameter('artId');
+
+        // 작품 정보 가져오기
+        $.getJSON("/json/arts.json", function(json) {
+            arts = json;
+
+            for (let i = 0; i < arts.length; i++) {
+                const art = arts[i];
+                const id = art.id;
+                if ( id == artId ) {
+                    const title = art.title;
+                    const artKeywords = art.artKeywords;
+                    const artDesc = art.artDesc;
+                    const artist = art.artist;
+                    const artistImageUrl = art.artistImageUrl;
+                    const artistKeywords = art.artistKeywords;
+                    const artistDesc = art.artistDesc;
+                    const artistUrl = art.artistUrl;
+                    const imageUrl = art.imageUrl;
+
+                    $('.artwork img').attr('src', imageUrl);
+
+                    $('.title h2').html(title);
+
+                    for (let j = 0; j < artKeywords.length; j++) {
+                        var artKeyword = artKeywords[j];
+                        var artKeyword = `<span>#${artKeyword}</span>`;
+                        $('.title h3').append(artKeyword);
+                    }
+
+                    for (let k = 0; k < artDesc.length; k++) {
+                        const desc = artDesc[k];
+                        var li = `
+                        <li>
+                            <div class="keyword">
+                                <h4>${desc.heading}</h4>
+                                <hr>
+                                <span>${desc.icon}</span>
+                            </div>
+                            <p>${desc.desc}</p>
+                        </li>
+                        `;
+                        $('.paper ul').append(li);
+                    }
+
+                    $('.artist_info h2').html(artist);
+
+                    $('.artist_info img').eq(0).attr('src', artistImageUrl);
+
+                    for (let l = 0; l < artistKeywords.length; l++) {
+                        var artistKeyword = artistKeywords[l];
+                        var artistKeyword = `<span>#${artistKeyword}</span>`;
+                        $('.artist_desc h3').append(artistKeyword)
+                    }
+
+                    $('.artist_desc p').html(artistDesc);
+
+                    for (let m = 0; m < artistUrl.length; m++) {
+                        const url = artistUrl[m];
+                        const type = url.type;
+                        if ( type == "instagram" ) {
+                            var icon = 'img/icon/instagram-icon.png';
+                        }
+                        var button = `
+                        <a href="${url.url}" target="_blank">
+                            <button class="neon_btn">
+                                <img src="${icon}" class="sns">
+                            </button>
+                        </a>
+                        `;
+                        $('.artist_links').append(button);
+                    }
+
+                    return
+                }
+            }
+
+            alert('잘못된 경로입니다.')
+            window.location.replace('/');
+        });
+
+        // 작품 크게 보기
+        $('.artwork .img_wrap').click(function() {
+            $(this).toggleClass('active');
+        })
+    </script>
+</body>
+</html>

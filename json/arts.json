@@ -1,0 +1,20 @@
+[
+    {
+        "id": "01",
+        "title": "밀회",
+        "artKeywords": ["keyword1", "keyword2", "keyword3"],
+        "artDesc": [
+            {"heading":"heading", "icon":"icon", "desc":"something"},
+            {"heading":"heading", "icon":"icon", "desc":"something"}
+        ],
+        "artist": "김준범",
+        "artistImageUrl": "/img/artist/artistname.png",
+        "artistKeywords": ["keyword1", "keyword2", "keyword3"],
+        "artistDesc": "artist description",
+        "artistUrl": [
+            {"type": "instagram", "url": "https://instagram.com"},
+            {"type": "instagram", "url": "https://instagram.com"}
+        ],
+        "imageUrl": "/img/art/01.jpg"
+    }
+]
