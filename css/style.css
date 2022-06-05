@@ -58,7 +58,7 @@ section {
     position: relative;
     height: 100%;
 }
-section:last-child {
+section.loading_section {
     height: 100vh;
 }
 

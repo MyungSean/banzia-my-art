@@ -84,7 +84,10 @@ section {
 }
 .artwork .img_wrap img {
     width: 100%;
+    max-width: 90vw;
+    max-height: 90vh;
     border-radius: 10px;
+    object-fit: contain;
     
 }
 .artwork .img_wrap.active img {
@@ -110,7 +113,8 @@ section {
     background-repeat: no-repeat;
     background-size: contain;
     margin: .5em;
-    width: 25%;
+    width: 23%;
+    max-width: 120px;
     height: 100%;
     left: 0;
     top: 0;
@@ -150,6 +154,7 @@ section {
 .paper h3 {
     display: flex;
     flex-flow: row nowrap;
+    justify-content: center;
     gap: .8em;
     margin: 1em;
 }
@@ -196,7 +201,8 @@ section {
 .artist_info .img_wrap img {
     display: block;
     margin: 0 auto;
-    width: 60%;
+    /* width: 60%; */
+    width: 100%;
 }
 
 .artist_info .artist_desc h2 {
@@ -260,6 +266,7 @@ section {
     width: 3.5em;
     height: 3.5em;
     padding: .65em;
+    cursor: pointer;
 }
 .share .share_btns button img {
     width: 100%;

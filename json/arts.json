@@ -2,19 +2,536 @@
     {
         "id": "01",
         "title": "밀회",
-        "artKeywords": ["keyword1", "keyword2", "keyword3"],
+        "artKeywords": ["은유적인", "혼란스러운", "난해한"],
         "artDesc": [
-            {"heading":"heading", "icon":"icon", "desc":"something"},
-            {"heading":"heading", "icon":"icon", "desc":"something"}
+            {
+                "heading":"비유",
+                "icon":"😏",
+                "desc":"무언가에 비유하며 설명하는 것을 자주하시네요. 자신을 설명할때 찰떡같이 설명해 타인에게 완벽한 이해를 돕기도 하지만 가끔 엉뚱한 비유로 웃음을 사기도 합니다!"
+            },
+            {
+                "heading":"혼란",
+                "icon":"😵",
+                "desc":"동시에 여러감정을 강하게 느낄 때가 많지 않으신가요? 몸과 마음이 따로 움직이기도 하고. 하지만 감정에 솔직하고 자신에 대한 이해를 잘 하는 편입니다."
+            },
+            {
+                "heading":"관심",
+                "icon":"❓",
+                "desc":"주변과 자신이 살고있는 곳에 대한 끊임없는 이해를 하려고 합니다. 의도적으로 자신을 세상에 노출시키려 하고 정보를 흡수하려 합니다."
+            }
         ],
         "artist": "김준범",
-        "artistImageUrl": "/img/artist/artistname.png",
-        "artistKeywords": ["keyword1", "keyword2", "keyword3"],
+        "artistImageUrl": "/img/artist/kjb.jpg",
+        "artistKeywords": ["kjb1", "kjb2", "kjb3"],
         "artistDesc": "artist description",
         "artistUrl": [
-            {"type": "instagram", "url": "https://instagram.com"},
-            {"type": "instagram", "url": "https://instagram.com"}
+            {"type": "instagram", "url": "https://www.instagram.com/junbeom2314riri/"}
         ],
         "imageUrl": "/img/art/01.jpg"
+    },
+    {
+        "id": "02",
+        "title": "WANNA WANNA",
+        "artKeywords": ["밝음", "따뜻한", "사랑스러운"],
+        "artDesc": [
+            {
+                "heading":"밝은",
+                "icon":"☀",
+                "desc":"새로운 발견을 즐기는 당신, 밝고 따뜻한 성격을 가진 듯 보이네요. 삶이 가끔 우울하고 어둡다고 느끼더라도 밝고 따뜻한 내면을 가진 당신은 남들에게 까지 따뜻함을 전하는 사람입니다!"
+            },
+            {
+                "heading":"낯섦을 즐기는",
+                "icon":"🏄‍♀️",
+                "desc":"가장 최근에 자신이 장하다가고 느꼈던 도전은 어떤것이 있었나요? 당신은 평소에 도전과 낯섦을 즐기는 사람입니다. 도전을 멈추지 말고 나아가시길 바랍니다!"
+            },
+            {
+                "heading":"앞으로 나서는",
+                "icon":"🏃‍♂️",
+                "desc":"오늘은 어떤 사람들과 대화를 했나요? 당신이 먼저 건낸 작은 한마디가 오늘은 한 사람의 하루를 기분좋게 만들 었을 것입니다. 먼저 건내는 작은 한 마디! 한 사람의 하루를 기쁘게 만들어주세요!"
+            }
+        ],
+        "artist": "김준범",
+        "artistImageUrl": "/img/artist/kjb.jpg",
+        "artistKeywords": ["kjb1", "kjb2", "kjb3"],
+        "artistDesc": "artist description",
+        "artistUrl": [
+            {"type": "instagram", "url": "https://www.instagram.com/junbeom2314riri/"}
+        ],
+        "imageUrl": "/img/art/02.jpg"
+    },
+    {
+        "id": "03",
+        "title": "S,S,S.",
+        "artKeywords": ["도발적인", "전복시키는", "천재적인"],
+        "artDesc": [
+            {
+                "heading":"도피",
+                "icon":"📴",
+                "desc":"가끔 도피를 하고싶다는 생각을 해보지 않으셨나요? 모든 것을 내려놓고, 아무도 없는 곳에서, 잠시라도.. 자신을 찾을 수 있는 중요한 시간입니다. 오늘 하루는 어떠셨나요? 고생한 자신에게 작은 도피로 치킨과 맥주 어떠신가요!?"
+            },
+            {
+                "heading":"과감함",
+                "icon":"🧨",
+                "desc":"가끔은 두려움과 망설임 없이 마음이 이끄는 대로 행동하는 당신. 분명 작지만 작은 용감한 행동으로 후회없는 행복한 하루가 지속될 것입니다!"
+            },
+            {
+                "heading":"엉뚱함",
+                "icon":"😛",
+                "desc":"가끔 엉뚱하지만 재밌는 행동을 하는 당신은 타고난 코미디언 입니다."
+            }
+        ],
+        "artist": "김준범",
+        "artistImageUrl": "/img/artist/kjb.jpg",
+        "artistKeywords": ["kjb1", "kjb2", "kjb3"],
+        "artistDesc": "artist description",
+        "artistUrl": [
+            {"type": "instagram", "url": "https://www.instagram.com/junbeom2314riri/"}
+        ],
+        "imageUrl": "/img/art/03.jpg"
+    },
+    {
+        "id": "04",
+        "title": "Hug them",
+        "artKeywords": ["가엾은", "예민한", "아픈"],
+        "artDesc": [
+            {
+                "heading":"기분전환",
+                "icon":"🎵",
+                "desc":"기분전환이 필요한 날, 어떤 방식으로 기분전환을 하시나요? 음악을 듣나요? 맛있는 음식을 먹나요? 목적지 없이 무작정 걷지는 않나요? 고된 오늘 하루 지금 당장 기분전환 하러 가세요!"
+            },
+            {
+                "heading":"조심스러운",
+                "icon":"🤔",
+                "desc":"오늘 하루 어떠셨나요? 오늘 하루 힘든일이 있지는 않은지 찬찬히 살펴보고 자신에게 무엇이 필요할지 곰곰해 생각해볼 시간 입니다."
+            },
+            {
+                "heading":"정석",
+                "icon":"📄",
+                "desc":"정석으로 하는 것을 좋아하는 당신. 어떤 것을 할 때도 놓지는 부분없이 완벽하게 해내는 당신은 Supernormal한 사람입니다!"
+            }
+        ],
+        "artist": "김준범",
+        "artistImageUrl": "/img/artist/kjb.jpg",
+        "artistKeywords": ["kjb1", "kjb2", "kjb3"],
+        "artistDesc": "artist description",
+        "artistUrl": [
+            {"type": "instagram", "url": "https://www.instagram.com/junbeom2314riri/"}
+        ],
+        "imageUrl": "/img/art/04.jpg"
+    },
+    {
+        "id": "05",
+        "title": "선악과를 삼키는 아담",
+        "artKeywords": ["종교적인", "달콤한", "도발적인"],
+        "artDesc": [
+            {
+                "heading":"도발적인",
+                "icon":"🔥",
+                "desc":"할 때는 하는 성격을 가진 당신! 과감하고 화끈한 성격을 가졌네요! "
+            },
+            {
+                "heading":"사랑하는",
+                "icon":"❤️",
+                "desc":"로맨티스트인 당신은 주변사람들에게 사랑을 잘 나누는 사람입니다. 좋아하는 사람에게 호감 표시를 확실하고 잘 하는 편입니다."
+            },
+            {
+                "heading":"빨리빨리",
+                "icon":"💨",
+                "desc":"어떤 일이든 빠르게 하지 않으면 조급함을 느낍니다. 자신이 모르는 것에 대해 새롭게 알아가려는 것에 동력이 되기도 합니다!"
+            }
+        ],
+        "artist": "김준범",
+        "artistImageUrl": "/img/artist/kjb.jpg",
+        "artistKeywords": ["kjb1", "kjb2", "kjb3"],
+        "artistDesc": "artist description",
+        "artistUrl": [
+            {"type": "instagram", "url": "https://www.instagram.com/junbeom2314riri/"}
+        ],
+        "imageUrl": "/img/art/05.jpg"
+    },
+    {
+        "id": "06",
+        "title": "WANNA WANNA",
+        "artKeywords": ["힘겨운", "견디기 힘든", "폭발하기 직전의 긴장감"],
+        "artDesc": [
+            {
+                "heading":"호기심",
+                "icon":"❓",
+                "desc":"호기심 왕인 당신! 오늘은 어떤 것에 또 호기심을 갖고 있나요? 호기심의 파워를 믿고 그 순수한 호기심 잃어버리지 마세요!"
+            },
+            {
+                "heading":"기다리는",
+                "icon":"⌛",
+                "desc":"무언가를 기다리는 것에 대해 익숙한 사람입니다. 최근 가장 잘 참았다 생각한 순간은 어떤 순간인가요? 만약 참지 않았다면 어떤 일이 생겼을지 생각해보며, 당신은 칭찬 받아 마땅합니다!"
+            },
+            {
+                "heading":"스트레스 해소",
+                "icon":"🎥",
+                "desc":"여름! 하면 공포영화라고 생각하셨나요? 당신은 스트레스를 해소할 줄 아는 사람입니다!"
+            }
+        ],
+        "artist": "김준범",
+        "artistImageUrl": "/img/artist/kjb.jpg",
+        "artistKeywords": ["kjb1", "kjb2", "kjb3"],
+        "artistDesc": "artist description",
+        "artistUrl": [
+            {"type": "instagram", "url": "https://www.instagram.com/junbeom2314riri/"}
+        ],
+        "imageUrl": "/img/art/06.jpg"
+    },
+    {
+        "id": "07",
+        "title": "luv no luv idk",
+        "artKeywords": ["공허함", "회의감", "관계"],
+        "artDesc": [
+            {
+                "heading":"관계에 대한 의문",
+                "icon":"🧑‍🤝‍🧑",
+                "desc":"작품을 시작 할 땐 많이 관계에대해서 의미가 없다고 생각했고, 공허함과 희의감이 조금 들었던 거 같아요 완전한 관계가 있나 궁금했어요."
+            },
+            {
+                "heading":"감춰지고, 잊혀지고",
+                "icon":"✏️",
+                "desc":"서로의 색깔을 보여주지 않은 채, 언제 그랬냐는 듯 다 지워버리겠죠. 이 모든 것도 어느 순간 모두 끝나버리겠죠."
+            },
+            {
+                "heading":"연기",
+                "icon":"🎭",
+                "desc":"우리는 혼자 남지 않기 위해, 서로를 위해 희생하고, 사랑한다는 말을 거짓말로…"
+            }
+        ],
+        "artist": "이창주",
+        "artistImageUrl": "/img/artist/lcj.jpg",
+        "artistKeywords": ["lcj1", "lcj2", "lcj3"],
+        "artistDesc": "artist description",
+        "artistUrl": [
+            {"type": "instagram", "url": "https://www.instagram.com/callacritic/"}
+        ],
+        "imageUrl": "/img/art/07.jpg"
+    },
+    {
+        "id": "08",
+        "title": "luv no luv idk",
+        "artKeywords": ["공허", "불안", "자아"],
+        "artDesc": [
+            {
+                "heading":"압박감",
+                "icon":"👨‍💻",
+                "desc":"작품을 만들어야 한다는 압박감. 쉬지않고 작업을 계속 6시간째 만들고 있지만, 난 또 밤새 작업물을 만들어야겠지. 공허함이 완전히 채워지지않지만, 조금이나 공허함이 해소되요."
+            },
+            {
+                "heading":"그저 그런",
+                "icon":"🚬",
+                "desc":"매번 똑같은 공허함은 적응이 되지 않고, 자야 할 눈을 안 가린 채로 다시 작업실 의자에서 작업을 합니다. 공허함과 불안감이 두려웠고, 그래서 담배도 피운 거 같은데. 공허함 대신 연기만 작업실을 가득 채우네요."
+            }
+        ],
+        "artist": "이창주",
+        "artistImageUrl": "/img/artist/lcj.jpg",
+        "artistKeywords": ["lcj1", "lcj2", "lcj3"],
+        "artistDesc": "artist description",
+        "artistUrl": [
+            {"type": "instagram", "url": "https://www.instagram.com/callacritic/"}
+        ],
+        "imageUrl": "/img/art/08.jpg"
+    },
+    {
+        "id": "09",
+        "title": "memories",
+        "artKeywords": ["기억", "과거", "일기장"],
+        "artDesc": [
+            {
+                "heading":"기록",
+                "icon":"✍️",
+                "desc":"그냥 기록하는 제 삶을 표현 했습니다. 시작 할 때 감정은 딱히 없었고 일기장 쓰듯이 써내려간 거 같아요. 그저 나의 삶을 기록했구나 라는 느낌이였습니다."
+            },
+            {
+                "heading":"기억",
+                "icon":"🧠",
+                "desc":"기억한 모든 것을 잃어갔어요 하지만, 잊은적 없었고 그 과거들을  다 기억해야만 했어요. 그래서 내 삶의 모든 걸 담았고, 모든 걸 기억하고 작품에 남기고 싶었어요."
+            },
+            {
+                "heading":"마주함",
+                "icon":"🖼️",
+                "desc":"안 좋은 상황들이 올 때마다 난 항상 작품 을 만들라고 이런 상황이 왔구나 생각을 했고 그게 벌이라면 마땅히 받았습니다. 사실 기억하고 싶지 않은 것들도 많았는데 작품으로 남기니 다 기억하게 되었어요."
+            }
+        ],
+        "artist": "이창주",
+        "artistImageUrl": "/img/artist/lcj.jpg",
+        "artistKeywords": ["lcj1", "lcj2", "lcj3"],
+        "artistDesc": "artist description",
+        "artistUrl": [
+            {"type": "instagram", "url": "https://www.instagram.com/callacritic/"}
+        ],
+        "imageUrl": "/img/art/09.jpg"
+    },
+    {
+        "id": "10",
+        "title": "rest",
+        "artKeywords": ["쉼", "현대인", "바쁜 삶"],
+        "artDesc": [
+            {
+                "heading":"편안한 공감",
+                "icon":"🧎",
+                "desc":"제가 서울살이를 하면서 사람들이 바쁘게 살아가는 것을 지켜보고 저 또한 그들과 똑같은 삶이기에 작가인 저는 그런 사람들을 위해 쉬어가라는 말을 해주고 싶었어요. 그래서 이때 감정은 그냥 편안했던 거 같아요 예쁜 말을 누군가에게 전할 땐 항상 마음이 온전해지는 거 같네요"
+            },
+            {
+                "heading":"마음",
+                "icon":"💙",
+                "desc":"빠르게 뛰기만 하던 사람들, 지치고 힘들어도 계속 할 수 밖에 없던 그들, 작품을 완성하고 난 후 얼른 인스타에 올려 사람들이 조금이라도 쉬어갔으면 좋겠다는 생각 뿐이어서 더 편안하게 작업했던 것 같아요."
+            },
+            {
+                "heading":"쉼",
+                "icon":"⏹️",
+                "desc":"사는게 재미가 없다라는 그들은 재미가 없으니까 자꾸 순간적인 자극들만 찾고 잠시 즐거워 웃다가도 회의감이 들어서 그냥 계속 웅덩이로 빠져요. 웅덩이에 빠지면 잠시 거기에서 머물러 있다 하늘을 보고 쉬었으면 좋겠어요."
+            }
+        ],
+        "artist": "이창주",
+        "artistImageUrl": "/img/artist/lcj.jpg",
+        "artistKeywords": ["lcj1", "lcj2", "lcj3"],
+        "artistDesc": "artist description",
+        "artistUrl": [
+            {"type": "instagram", "url": "https://www.instagram.com/callacritic/"}
+        ],
+        "imageUrl": "/img/art/10.jpg"
+    },
+    {
+        "id": "11",
+        "title": "no luv",
+        "artKeywords": ["공허", "빈 공간", "공허한 사랑"],
+        "artDesc": [
+            {
+                "heading":"공허함",
+                "icon":"🏠",
+                "desc":"이작품을 시작 할 땐 누군가에 집에 나와 집에 왔어야 했었고, 그때 감정은 그냥 좋지도 행복하지도 않았던 거 같아요. 그냥 되게 집에 왔을 때 비어보였어요"
+            },
+            {
+                "heading":"시작과 끝",
+                "icon":"➰",
+                "desc":"시작과 똑같던 거 같습니다 그냥 또 이렇게 살아가는 구나 하고 다른 작업을 했던 거 같아요. 삶은 시작과 끝의 반복이라는 생각이 들었습니다."
+            },
+            {
+                "heading":"(불)완전",
+                "icon":"👌",
+                "desc":"사랑하던 사람과 2시간 전에 헤어진 후 세상에 완전한 것이 없다는 걸 깨달았어요. 불완전 했던 날들보단 하루가 편했어요."
+            }
+        ],
+        "artist": "이창주",
+        "artistImageUrl": "/img/artist/lcj.jpg",
+        "artistKeywords": ["lcj1", "lcj2", "lcj3"],
+        "artistDesc": "artist description",
+        "artistUrl": [
+            {"type": "instagram", "url": "https://www.instagram.com/callacritic/"}
+        ],
+        "imageUrl": "/img/art/11.jpg"
+    },
+    {
+        "id": "12",
+        "title": "life",
+        "artKeywords": ["극복", "목표", "다짐"],
+        "artDesc": [
+            {
+                "heading":"홀로 서기",
+                "icon":"💵",
+                "desc":"집으로 부터 독립해 서울에서 혼자 살기 시작하면서, 생활비를 직접 벌어 사용하다 보니깐, 돈에 쫓겨 사는 것 같이 느껴 졌어요. "
+            },
+            {
+                "heading":"다짐",
+                "icon":"👊",
+                "desc":"힘들고 지칠때, 불안과 고민으로 지새운밤으로 삶을 채워갈때, “버티자, 할 수있다” 이말만 되새긴 거 같아요 지치지말자 항상 이런 말을 하면서 힘을 냈던 거같네요"
+            },
+            {
+                "heading":"망각",
+                "icon":"🤯",
+                "desc":"처음 세웠던 목표들, 성공하겠다는 다짐들은 비싼 술들이 목으로 넘어가기 시작할 때, 그때 그 모습을 까먹었어죠. "
+            }
+        ],
+        "artist": "이창주",
+        "artistImageUrl": "/img/artist/lcj.jpg",
+        "artistKeywords": ["lcj1", "lcj2", "lcj3"],
+        "artistDesc": "artist description",
+        "artistUrl": [
+            {"type": "instagram", "url": "https://www.instagram.com/callacritic/"}
+        ],
+        "imageUrl": "/img/art/12.jpg"
+    },
+    {
+        "id": "13",
+        "title": "조선팔도의 나",
+        "artKeywords": ["예술", "자연", "편안"],
+        "artDesc": [
+            {
+                "heading":"전생",
+                "icon":"🧬",
+                "desc":"여러분은 전생에 어떤 사람이었을 것 같나요? 또는 어떤 사람이고 싶으신가요? 여러분이 가진 다양한 인격에 어쩌면 여러분의 전생의 모습이 숨어있을지도 몰라요!"
+            },
+            {
+                "heading":"편안",
+                "icon":"🍃",
+                "desc":"자연을 좋아하나요? 도심에서 벗어나 자연 속에서 잠깐 머물다보면 마음이 편안해지는 것 같아요. 복잡했던 생각도 정리되고요. 지금 상황이 힘들다면 자연을 좋아하지 않더라도 마음이 편안해지는 곳을 찾아가봐요."
+            },
+            {
+                "heading":"인격",
+                "icon":"😉",
+                "desc":"여러분은 어떤 성격을 가지고 있나요? 한 사람에게도 다양한 성격과 모습이 있는 것 같아요. 자신이 가진 성격과 모습을 아는 것도 행복해지는데 중요한 일인 것 같아요."
+            }
+        ],
+        "artist": "김인영",
+        "artistImageUrl": "/img/artist/kiy.jpg",
+        "artistKeywords": ["kiy1", "kiy2", "kiy3"],
+        "artistDesc": "artist description",
+        "artistUrl": [
+            {"type": "instagram", "url": "https://www.instagram.com/vivid_or_vibrant_drawing"}
+        ],
+        "imageUrl": "/img/art/13.jpg"
+    },
+    {
+        "id": "14",
+        "title": "크로노스 카이로스",
+        "artKeywords": ["생각", "성찰", "내면"],
+        "artDesc": [
+            {
+                "heading":"시간",
+                "icon":"🕒",
+                "desc":"여러분은 시간을 어떻게 생각하고 있나요? 시간은 모두에게 똑같이 주어졌잖아요. 여러분에게 주어진 소중한 시간들과 삶을 어떻게 보낼 수 있을지 고민해보면 좋을 것 같아요. "
+            },
+            {
+                "heading":"의미",
+                "icon":"📔",
+                "desc":"저는 하루를 마무리하기 전에 일기를 씁니다. 그날의 감정, 상황, 관찰한 것들을 적는데, 이 시간이 하루 중 가장 의미있는 시간인 것 같아요. 여러분이 가장 의미있게 생각하는 시간은 언제인가요?"
+            },
+            {
+                "heading":"성찰",
+                "icon":"✍️",
+                "desc":"여러분은 자기자신을 돌아보는 시간을 갖고 있나요? 방향을 잡기 어려울 때는 스스로를 성찰하며 마음을 다지는 시간을 갖는 것도 중요한 일이에요!"
+            }
+        ],
+        "artist": "김인영",
+        "artistImageUrl": "/img/artist/kiy.jpg",
+        "artistKeywords": ["kiy1", "kiy2", "kiy3"],
+        "artistDesc": "artist description",
+        "artistUrl": [
+            {"type": "instagram", "url": "https://www.instagram.com/vivid_or_vibrant_drawing"}
+        ],
+        "imageUrl": "/img/art/14.jpg"
+    },
+    {
+        "id": "15",
+        "title": "고양이를 위한 그림",
+        "artKeywords": ["이타적", "행동", "도움"],
+        "artDesc": [
+            {
+                "heading":"고양이",
+                "icon":"🐈",
+                "desc":"동물! 그중에서도 고양이를 좋아하시나요? 고양이를 쓰다듬는 것도 좋지만, 고양이들이 처한 문제에 관심을 가져보는 것은 어떨까요? 아직도 어떤 고양이들은 길에서 방황하고 있답니다ㅜㅜ"
+            },
+            {
+                "heading":"마음주기",
+                "icon":"💑",
+                "desc":"내가 아닌 다른 존재에게 마음을 준 적이 있나요? 다른 존재, 특히 힘들고 소외당한 존재에게는 마음을 주는 것만으로 큰 힘이 될 수 있어요!"
+            },
+            {
+                "heading":"지구 공동체",
+                "icon":"🌏",
+                "desc":"우리는 인간 사회에서 살아가고 있지만, 사실 인간 사회는 지구라는 거대한 공동체 안에 있어요. 그중에는 인간이 아닌 존재도 있구요. 우리 모두가 함께 살아갈 수 있는 방법은 없을까요? 같이 고민해봐요."
+            }
+        ],
+        "artist": "김인영",
+        "artistImageUrl": "/img/artist/kiy.jpg",
+        "artistKeywords": ["kiy1", "kiy2", "kiy3"],
+        "artistDesc": "artist description",
+        "artistUrl": [
+            {"type": "instagram", "url": "https://www.instagram.com/vivid_or_vibrant_drawing"}
+        ],
+        "imageUrl": "/img/art/15.jpg"
+    },
+    {
+        "id": "16",
+        "title": "사노라면",
+        "artKeywords": ["불안", "피곤", "희망"],
+        "artDesc": [
+            {
+                "heading":"일상",
+                "icon":"🥱",
+                "desc":"반복되는 일상에 지쳐있나요? 반대로 여러분이 해야할 일을 묵묵히 하고 있다고 생각하면 어떨까요? 작은 의미들을 찾으며 묵묵해 하다보면 여러분의 밝은 날이 찾아올거에요."
+            },
+            {
+                "heading":"의미",
+                "icon":"🌌",
+                "desc":"여러분은 어떤 것에서 의미를 찾으시나요? 의미를 찾을 수 있다면 지금 여러분의 삶에 더 몰입할 수 있을거에요. 힘들고 불안하다면 자신을 돌아볼 때가 온 것 같아요. "
+            },
+            {
+                "heading":"희망",
+                "icon":"🌱",
+                "desc":"여러분은 어떤 미래를 그리고 있나요? 미래를 그릴 수 있다면 희망도 찾을 수 있을 거에요."
+            }
+        ],
+        "artist": "김인영",
+        "artistImageUrl": "/img/artist/kiy.jpg",
+        "artistKeywords": ["kiy1", "kiy2", "kiy3"],
+        "artistDesc": "artist description",
+        "artistUrl": [
+            {"type": "instagram", "url": "https://www.instagram.com/vivid_or_vibrant_drawing"}
+        ],
+        "imageUrl": "/img/art/16.jpg"
+    },
+    {
+        "id": "17",
+        "title": "살아있다",
+        "artKeywords": ["이질감", "친구", "사회"],
+        "artDesc": [
+            {
+                "heading":"이질감",
+                "icon":"🐟",
+                "desc":"여러분은 어떤 목표를 가지고 있나요? 주변에 있는 사람들과 다른 목표를 가지고 있다면 이질감을 느낄 수 있지만, 자신의 신념을 믿고 나아가는 삶도 의미있는 것 같아요. "
+            },
+            {
+                "heading":"단단함",
+                "icon":"🗿",
+                "desc":"여러분은 어떤 결심을 갖고 살아가고 있나요? 굳은 결심을 가지고 살아가는 것은 힘들 수 있어요. 하지만 단단한 마음을 가지고 자신의 신념을 믿고 나아가는 삶도 응원합니다."
+            },
+            {
+                "heading":"친구",
+                "icon":"🤝",
+                "desc":"살아가는 동안 목표와 방향이 다른 사람들을 만날 수 있어요. 하지만 달라도 서로를 존중하며 사랑하는 것이 바로 친구가 되는 것이랍니다. "
+            }
+        ],
+        "artist": "김인영",
+        "artistImageUrl": "/img/artist/kiy.jpg",
+        "artistKeywords": ["kiy1", "kiy2", "kiy3"],
+        "artistDesc": "artist description",
+        "artistUrl": [
+            {"type": "instagram", "url": "https://www.instagram.com/vivid_or_vibrant_drawing"}
+        ],
+        "imageUrl": "/img/art/17.jpg"
+    },
+    {
+        "id": "18",
+        "title": "우투커니",
+        "artKeywords": ["인내", "극복", "감내"],
+        "artDesc": [
+            {
+                "heading":"헤아림",
+                "icon":"💧",
+                "desc":"이유없이 힘들고 지칠 때는 잠깐 눈을 감고 앉아서 왜 힘든지, 왜 슬픈지 곰곰히 생각해봐요. 어쩌면 답을 알게 될 수도 있으니 잠깐 시간을 내어 행동해보는 건 어때요?"
+            },
+            {
+                "heading":"위로",
+                "icon":"💌",
+                "desc":"여러분은 누군가를 위로해준 적이 있나요? 힘든 사람들을 위로하는 것도 좋지만, 때로는 여러분 스스로를 위로해야할 때도 있을 것 같아요. "
+            },
+            {
+                "heading":"인내",
+                "icon":"🩹",
+                "desc":"살다보면 힘들 수 있고, 슬플 수 있어요. 하지만 그런 것들도 다 지나가게 되는 것 같아요. 인내하는 사람에게는 모든 것이 다 지나가는 일이에요. "
+            }
+        ],
+        "artist": "김인영",
+        "artistImageUrl": "/img/artist/kiy.jpg",
+        "artistKeywords": ["kiy1", "kiy2", "kiy3"],
+        "artistDesc": "artist description",
+        "artistUrl": [
+            {"type": "instagram", "url": "https://www.instagram.com/vivid_or_vibrant_drawing"}
+        ],
+        "imageUrl": "/img/art/18.jpg"
     }
 ]

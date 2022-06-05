@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/result.css">
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
 </head>
 <body>
     <header></header>
@@ -59,7 +60,7 @@
                             <img src="" alt="artist" class="neon_img">
                         </div>
                         <div class="artist_desc">
-                            <h2></h2>
+                            <h2><span></span> 작가</h2>
                             <h3></h3>
                             <p></p>
                             <div class="artist_links">
@@ -82,7 +83,6 @@
                         <h1 class="neon_text">결과 공유</h1>
                         <div class="share_btns">
                             <button id="share_kakao" class="neon_btn"><img src="/img/icon/kakaotalk-icon.png"></button>
-                            <button id="share_instagram" class="neon_btn"><img src="/img/icon/instagram-icon.png"></button>
                             <button id="share_facebook" class="neon_btn"><img src="/img/icon/facebook-icon.png"></button>
                             <button id="share_twitter" class="neon_btn"><img src="/img/icon/twitter-icon.png"></button>
                             <button id="share_link" class="neon_btn"><img src="/img/icon/link-icon.png"></button>
@@ -90,7 +90,7 @@
                     </div>
                     <div class="test_menu">
                         <!-- <button class="neon_btn"><span class="neon_text">다시하기</span></button> -->
-                        <a href="/"><button class="neon_btn"><span class="neon_text">처음으로 돌아가기</span></button></a>
+                        <a href="/"><button class="neon_btn"><span class="neon_text">다시 테스트하기</span></button></a>
                     </div>
                 </div>
                 <div class="banzia">
@@ -163,7 +163,7 @@
                         $('.paper ul').append(li);
                     }
 
-                    $('.artist_info h2').html(artist);
+                    $('.artist_info h2 span').html(artist);
 
                     $('.artist_info img').eq(0).attr('src', artistImageUrl);
 
@@ -202,6 +202,86 @@
         // 작품 크게 보기
         $('.artwork .img_wrap').click(function() {
             $(this).toggleClass('active');
+        })
+
+        // 결과 공유
+        // 카카오톡으로 공유
+        Kakao.init('3cf6ca1738e2e190ecedc3049bf32a99');
+        Kakao.Link.createDefaultButton({
+            container: '#share_kakao',
+            objectType: 'feed',
+            content: {
+                title: '예술 성향 테스트',
+                description: '나에게 가장 잘 맞는 예술작품은?',
+                imageUrl: 'https://firebasestorage.googleapis.com/v0/b/banzia-personal-art-test.appspot.com/o/img%2Fgraphic%2Ftest_profile.jpg?alt=media&token=90183e22-cc02-4107-b3ed-025cc6f4e497',
+                link: {
+                mobileWebUrl: 'https://developers.kakao.com',
+                webUrl: 'https://developers.kakao.com'
+                }
+            },
+            buttons: [
+                {
+                title: '친구 결과 보기',
+                link: {
+                    mobileWebUrl: window.location.href,
+                    webUrl: window.location.href
+                }
+                },
+                {
+                title: '테스트 하기',
+                link: {
+                    mobileWebUrl: window.location.origin,
+                    webUrl: window.location.origin
+                }
+                }
+            ]
+        });
+
+        // 페이스북으로 공유
+        $('#share_facebook').click(function() {
+            window.open("http://www.facebook.com/sharer/sharer.php?u=" + window.location.href, "공유", "height=500,width=500");
+        })
+
+        // 트위터로 공유
+        $('#share_twitter').click(function() {
+            var sendUrl = window.location.href; // 전달할 URL
+            window.open("https://twitter.com/intent/tweet?url=" + sendUrl);
+        })
+
+        // 링크로 공유
+        function siteLinkCopy() {
+            var url = window.location.href;
+            var description = "나에게 가장 잘 맞는 예술 작품은?.";
+            var createInput = document.createElement("textarea");
+            
+            document.getElementsByClassName("shareSite")[0].appendChild(createInput);
+            createInput.value = `${url}\n${description}`;
+            
+            createInput.select();
+            document.execCommand('copy');
+            document.getElementsByClassName("shareSite")[0].removeChild(createInput);
+            
+            alert('링크가 복사되었습니다.');
+        }
+
+
+        // 기타 방식으로 공유
+        $('#share_link').click(function() {
+            
+            // 공유 기능 가능하면 공유 네비게이션 열고 불가능하면 공유 링크 복사
+            if (navigator.share) {
+                var title = window.document.title;
+                var url = window.document.location.href;
+
+                navigator.share({
+                    title: `${title}`,
+                    url: `${url}`
+                })
+                .catch(console.error);
+            } else {
+                siteLinkCopy();
+            }
+
         })
     </script>
 </body>
