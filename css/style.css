@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
 :root {
-    --ad-bottom-height: 50px;
+    /* --ad-bottom-height: 50px; */
+    --ad-bottom-height: 100px;
     --max-width: 720px;
 }
 
@@ -48,6 +49,7 @@ header {
 }
 main {
     display: flex;
+    display: none;
     flex-flow: column nowrap;
     height: 100%;
 }
@@ -55,11 +57,20 @@ main {
     height: 100%;
 }
 section {
+    display: none;
     position: relative;
     height: 100%;
+    overflow: hidden;
+}
+section:first-child {
+    /* display: block; */
 }
 section.loading_section {
-    height: 100vh;
+    /* display: block; */
+    /* height: 100vh; */
+}
+.bumper {
+    height: var(--ad-bottom-height);
 }
 
 .neon_text {
@@ -249,7 +260,9 @@ header {
     word-break: keep-all;
 }
 .q.img ul li div {
+    position: relative;
     height: auto;
+    max-height: 25vh;
     padding: 0;
     overflow: hidden;
 }
@@ -396,7 +409,7 @@ header {
 }
 
 
-/* submit */
+/* developer board */
 #submit {
     position: fixed;
     left: 0;
@@ -410,4 +423,11 @@ header {
     top: 40px;
     z-index: 999;
 }
-
+#score-board {
+    position: fixed;
+    right: 20px;
+    top: 70px;
+    z-index: 999;
+    color: #fff;
+    background-color: #000;
+}

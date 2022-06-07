@@ -21,6 +21,7 @@ main {
     overflow: hidden;
 }
 section {
+    display: block;
     position: relative;
     height: inherit;
     padding: 1rem;

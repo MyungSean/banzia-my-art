@@ -26,24 +26,46 @@
                 </div>
             </header>
             <main>
-                <audio autoplay loop id="bgm">
-                    <source src="/audio/bgm.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>
-                <div class="bgm_ctrl bgm-on hide">
-                    <span class="material-symbols-outlined" id="bgm-on">music_note</span>
-                    <span class="material-symbols-outlined" id="bgm-off">music_off</span>
+                <div>
+                    <audio autoplay loop id="bgm">
+                        <source src="/audio/bgm.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <div class="bgm_ctrl bgm-on hide">
+                        <span class="material-symbols-outlined" id="bgm-on">music_note</span>
+                        <span class="material-symbols-outlined" id="bgm-off">music_off</span>
+                    </div>
+            
+                    <!-- <button id="submit" onclick="submit()">submit</button>
+                    <button id="scrollLock">scroll lock</button>
+                    <div id="score-board">
+                        <h1>score</h1>
+                        <p>01: <span>0</span></p>
+                        <p>02: <span>0</span></p>
+                        <p>03: <span>0</span></p>
+                        <p>04: <span>0</span></p>
+                        <p>05: <span>0</span></p>
+                        <p>06: <span>0</span></p>
+                        <p>07: <span>0</span></p>
+                        <p>08: <span>0</span></p>
+                        <p>09: <span>0</span></p>
+                        <p>10: <span>0</span></p>
+                        <p>11: <span>0</span></p>
+                        <p>12: <span>0</span></p>
+                        <p>13: <span>0</span></p>
+                        <p>14: <span>0</span></p>
+                        <p>15: <span>0</span></p>
+                        <p>16: <span>0</span></p>
+                        <p>17: <span>0</span></p>
+                        <p>18: <span>0</span></p>
+                    </div> -->
                 </div>
-        
-                <button id="submit" onclick="submit()">submit</button>
-                <button id="scrollLock">scroll lock</button>
-                <!-- <button id="scrollLockk">scroll lock</button> -->
         
                 <div class="sections">
                     <section id="s1">
                         <div class="content">
                             <div class="img_wrap">
-                                <img src="/img/bg/street.jpg" />
+                                <img src="/img/bg/street_1.jpg" />
                             </div>
                         </div>
                         <div class="q" id="q1" data-aos="fade-up">
@@ -61,7 +83,7 @@
                     <section id="s2">
                         <div class="content">
                             <div class="img_wrap">
-                                <img src="/img/bg/street.jpg" />
+                                <img src="/img/bg/street_2.jpg" />
                             </div>
                         </div>
                         <div class="q" id="q2" data-aos="fade-up">
@@ -79,7 +101,7 @@
                     <section id="s3">
                         <div class="content">
                             <div class="img_wrap">
-                                <img src="/img/bg/street.jpg" />
+                                <img src="/img/bg/stair.jpg" />
                             </div>
                         </div>
                         <div class="q" id="q3" data-aos="fade-up">
@@ -96,7 +118,7 @@
                     <section id="s4">
                         <div class="content">
                             <div class="img_wrap">
-                                <img src="/img/bg/street.jpg" />
+                                <img src="/img/bg/stair.jpg" />
                             </div>
                         </div>
                         <div class="d" data-aos="fade-up">
@@ -109,7 +131,7 @@
                     <section id="s5">
                         <div class="content">
                             <div class="img_wrap">
-                                <img src="/img/bg/cafe2.jpg" />
+                                <img src="/img/bg/cafe_1.jpg" />
                             </div>
                         </div>
                         <div class="q" id="q4" data-aos="fade-up">
@@ -126,7 +148,7 @@
                     <section id="s6">
                         <div class="content">
                             <div class="img_wrap">
-                                <img src="/img/bg/cafe2.jpg" />
+                                <img src="/img/bg/cafe_1.jpg" />
                             </div>
                         </div>
                         <div class="q img" id="q5" data-aos="fade-up">
@@ -143,12 +165,12 @@
                     <section id="s7">
                         <div class="content">
                             <div class="img_wrap">
-                                <img src="/img/bg/street.jpg" />
+                                <img src="/img/bg/phone.jpg" />
                             </div>
                         </div>
                         <div class="q" id="q6" data-aos="fade-up">
                             <p>한동안 가만히 선채로 그림을 바라보았다. 카페의 신비로운 분위기 때문인지 그림이 나에게 어떤 말을 건내려는 것처럼 보였다. 나는 점점 그림에 빠져들어갔다.<br>
-                            그때 주머니에서 진동이 울렸다.</p>
+                            그때 주머니에서 진동이 울렸다. 애인의 문자다</p>
                             <h2>Q. 주말에 영화보고 나서 하고 싶은 거 있어?</h2>
                             <ul>
                                 <li><div class="ans1">날씨도 좋은데 밖에서 신나게 놀고 싶다.</div></li>
@@ -207,7 +229,7 @@
                             </div>
                         </div>
                     </section>
-                    <!-- <section id="s11">
+                    <section id="s11">
                         <div class="content">
                             <div class="img_wrap">
                                 <img src="/img/bg/wooden-pattern.jpg " />
@@ -309,7 +331,7 @@
                                 </div>
                             </div>
                         </div>
-                    </section> -->
+                    </section>
                     <section id="s12">
                         <div class="content">
                             <div class="img_wrap">
@@ -326,10 +348,10 @@
                     <section id="s13">
                         <div class="content">
                             <div class="img_wrap">
-                                <img src="/img/bg/street.jpg" />
+                                <img src="/img/bg/phone.jpg" />
                             </div>
                         </div>
-                        <div class="q" id="q9" data-aos="fade-up">
+                        <div class="q last_q" id="q9" data-aos="fade-up">
                             <p>그를 기다리는 동안 자리에서 주말에 볼 영화를 예매 하기로 했다.</p>
                             <h2>Q. 내가 예매할 영화는</h2>
                             <ul>
@@ -348,6 +370,7 @@
                             <h1 class="neon_text">당신을 위한 작품을 찾고 있습니다</h1>
                         </div>
                     </section>
+                    <div class="bumper"></div>
                 </div>
             </main>
         </div>
@@ -360,11 +383,6 @@
                 data-ad-width   = "320" 
                 data-ad-height  = "50">
             </ins> 
-            <!-- <ins class="kakao_ad_area" style="display:none;" 
-                data-ad-unit    = "DAN-SfDWxVHohcg7I8Ea" 
-                data-ad-width   = "728" 
-                data-ad-height  = "90">
-            </ins>  -->
         </div>
         <script type="text/javascript" src="//t1.daumcdn.net/kas/static/ba.min.js" async></script>
     </div>
@@ -379,7 +397,6 @@
             delay: 200,
             duration: 1000,
             easing: 'ease',
-            // offset: -900
         });
     </script>
     <!-- <script src="https://unpkg.com/scrollbooster@2/dist/scrollbooster.min.js"></script> -->
@@ -463,11 +480,26 @@
 
         // 다음섹션으로 이동
         function moveToNextSection(thisObj) {
+            // 중복 방지
+            if ( clicked ) {
+                return
+            } else {
+                clicked = true;
+            }
+
+            // 섹션 보이기
+            thisObj.closest("section").next().show();
+            
+            // 섹션 이동
             setTimeout(() => {
                 $('html,body').animate({ scrollTop: thisObj.closest("section").next().offset().top}, 200);
-            }, 1000);
-            setTimeout(() => {
+
                 clicked = false;
+            }, 1000);
+
+            setTimeout(() => {
+                // 섹션 숨기기
+                thisObj.closest("section").hide();
             }, 2000);
         }
 
@@ -475,6 +507,12 @@
         $('#start_btn').click(function() {
             bgm.play();
             $('.bgm_ctrl').removeClass('hide');
+
+            $('main').show();
+            $('#s1').show();
+            setTimeout(() => {
+                $('header').hide();
+            }, 2000);
         })
 
         $('.move-to-next').click(function() {
@@ -483,12 +521,6 @@
 
         // 답변 선택 액션
         $('.q li div').click(function() {
-            // 중복 방지
-            if ( clicked ) {
-                return
-            } else {
-                clicked = true;
-            }
 
             // 선택한 질문 아이디 가져오기
             var q = $(this).closest('.q').attr("id");
@@ -516,6 +548,7 @@
             
             // 다음 페이지로
             moveToNextSection($(this));
+            markScore();
         })
 
         $('.menu button').click(function(e) {
@@ -574,22 +607,60 @@
             $(location).attr('href', url);
         }
 
+        // 점수판에 점수 표시
+        function markScore() {
+            if (!scoreChart) {
+                console.log("error: scoreChart not founded.");
+                return
+            }
+
+            var scores = {"01":0, "02":0, "03":0, "04":0, "05":0, "06":0, "07":0, "08":0, "09":0, "10":0, "11":0, "12":0, "13":0, "14":0, "15":0, "16":0, "17":0, "18":0}
+
+            for (let i = 0; i < answers.length; i++) {
+                const answer = answers[i];
+                const q = answer.q;
+                const a = answer.a;
+                const targets = scoreChart[q][a];
+                for (let j = 0; j < targets.length; j++) {
+                    const target = targets[j];
+                    scores[target] = Number(scores[target]) + 1;
+                }
+            }
+
+
+            // 나에게 해당하는 것 선택
+            var checkboxes = $('.menu form input[type=checkbox]');
+            for (let i = 0; i < checkboxes.length; i++) {
+                const checkbox = checkboxes[i];
+                if (checkbox.checked) {
+                    const target = checkbox.value;
+                    scores[target] = Number(scores[target]) + 2;
+                }
+            }
+
+            // 점수 마킹
+            var arr = Object.keys(scores).sort();
+            for (let k = 0; k < arr.length; k++) {
+                const key = arr[k];
+                const score = scores[key];
+                $('#score-board p span').eq(k).html(score);
+            }
+
+        }
+
 
         // 결과 제출시키기
-        $(window).scroll(function() {
+        $('.last_q li').click(function() {
+            console.log('submit');
             $('.wait_text h1').hide();
-            // console.log($(window).scrollTop() + $(window).height() == $(document).height());
-            if($(window).scrollTop() + $(window).height() >= $(document).height() - 50 ) {
-                setTimeout(function(){
-                    $('.wait_text h1').fadeIn();
-                }, 200);
+            setTimeout(function(){
+                $('.wait_text h1').fadeIn();
+            }, 2000);
 
-                setTimeout(function(){
-                    submit();
-                }, 5000);
-            }
-        });
-
+            setTimeout(function(){
+                submit();
+            }, 5000);
+        })
     </script>
 </body>
 </html>
