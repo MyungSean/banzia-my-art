@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
 :root {
-    /* --ad-bottom-height: 50px; */
     --ad-bottom-height: 100px;
     --max-width: 720px;
 }
@@ -31,7 +30,7 @@ body > .wrap > .content {
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 50px;
+    height: var(--ad-bottom-height);
     max-width: var(--max-width);
     background-color: #1F150C;
 }
@@ -39,7 +38,7 @@ body > .wrap > .content {
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 50px;
+    height: var(--ad-bottom-height);
     max-width: var(--max-width);
     background-color: #1F150C;
 }
@@ -231,7 +230,7 @@ header {
 .q p,
 .d p {
     font-size: 1.1em;
-    font-weight: 100;
+    font-weight: 300;
     line-height: 1.4em;
     word-break: keep-all;
 }
@@ -416,11 +415,16 @@ header {
     top: 0;
     z-index: 999;
 }
-#scrollLock,
-#scrollLockk {
+#scrollLock {
     position: fixed;
     left: 0;
     top: 40px;
+    z-index: 999;
+}
+#showSections {
+    position: fixed;
+    left: 0;
+    top: 80px;
     z-index: 999;
 }
 #score-board {
