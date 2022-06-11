@@ -10,9 +10,9 @@ $('#showSections').click(function() {
 })
 
 // 새로고침 방지
-// window.onbeforeunload = function() {
-//     return "페이지를 새로고침하면 저장되지 않은 내용이 사라집니다. 새로고침 하시겠습니까?";
-// };
+window.onbeforeunload = function() {
+    return "페이지를 새로고침하면 저장되지 않은 내용이 사라집니다. 새로고침 하시겠습니까?";
+};
 
 
 // 게임 참여 인원 표시
