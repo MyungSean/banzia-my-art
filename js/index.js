@@ -43,7 +43,8 @@ function recordResult(answers, scores, result) {
             type2: type2
         },
         score: scores,
-        result: result
+        result: result,
+        tiem: new Date().getTime()
     })
     .then(()=> {
         // 결과 페이지로 이동
