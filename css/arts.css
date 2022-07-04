@@ -1,0 +1,40 @@
+main {
+    display: block;
+    padding: 1em;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.4em;
+    margin: 2em 0;
+}
+
+.gallery {
+    width: 100%;
+    padding-bottom: 4em;
+}
+.gallery .art {
+    width: 100%;
+    max-width: 300px;
+    padding: .4em;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+.gallery .art .img_wrap {
+    border-radius: 10px;
+    overflow: hidden;
+}
+.gallery .art img {
+    width: 100%;
+}
+.gallery .art h2 {
+    font-size: 1.2em;
+    margin: .4em;
+}
+.gallery .art h3 {
+    font-size: .9em;
+    font-weight: 300;
+}

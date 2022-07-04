@@ -41,7 +41,7 @@ section {
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url(/img/bg/bulb.png);
+    background-image: url(../img/bg/bulb.png);
     background-repeat: no-repeat;
     background-position: center top;
     background-size: contain;
@@ -56,7 +56,7 @@ section {
     transform: translateX(-50%);
     width: 100vw;
     height: 50%;
-    background-image: url(/img/bg/brick-wall.jpg);
+    background-image: url(../img/bg/brick-wall.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -99;
@@ -100,21 +100,51 @@ section {
 }
 
 
+.tag {
+    margin-bottom: 3em;
+}
+.tag .title {
+    text-align: center;
+    color: rgb(226, 153, 16);
+}
+.tag h2 {
+    font-size: 2em;
+    font-weight: 500;
+    margin: 0 auto;
+    max-width: inherit;
+}
+.tag h3 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: .8em;
+    margin: 1em;
+}
+.tag .art_comment {
+    text-align: center;
+    white-space: pre-wrap;
+    line-height: 1.4em;
+    font-size: 1em;
+    margin: 1em 0;
+    color: #fff;
+}   
+
+
 .paper {
     position: relative;
-    padding: 3em 2em;
+    padding: 2em 3.2em;
     background-color: rgb(255, 247, 228);
-    background-image: url(/img/bg/paper.png);
+    background-image: url(../img/bg/paper.png);
     border-radius: 10px;
     color: rgb(45, 6, 6);
 }
 .paper .corner {
     position: absolute;
-    background-image: url(/img/bg/corner.png);
+    background-image: url(../img/bg/corner.png);
     background-repeat: no-repeat;
     background-size: contain;
     margin: .5em;
-    width: 23%;
+    width: 18%;
     max-width: 120px;
     height: 100%;
     left: 0;
@@ -142,22 +172,6 @@ section {
     right: 0;
     bottom: 0;
     transform: scale(-1, -1);
-}
-
-.paper .title {
-    text-align: center;
-    color: rgb(226, 153, 16);
-}
-.paper h2 {
-    font-size: 2em;
-    font-weight: 700;
-}
-.paper h3 {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    gap: .8em;
-    margin: 1em;
 }
 
 .paper ul {
@@ -241,6 +255,7 @@ section {
     align-items: center;
     height: 3.5em;
     padding: .65em 1.2em;
+    font-size: .9em;
 }
 .artist_info .artist_links button img {
     /* width: 100%; */
@@ -258,7 +273,7 @@ section {
 
 .share {
     text-align: center;
-    background-image: url(/img/bg/brick-wall.jpg);
+    background-image: url(../img/bg/brick-wall.jpg);
     background-size: cover;
 }
 .share h1 {
@@ -285,6 +300,11 @@ section {
     flex-flow: column nowrap;
     gap: 1em;
     padding: 2rem;
+}
+.share .test_menu button {
+    cursor: pointer;
+    width: 90%;
+    max-width: 320px;
 }
 .share .banzia {
     font-size: .8em;

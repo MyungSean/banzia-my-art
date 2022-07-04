@@ -94,6 +94,12 @@ function moveToNextSection(thisObj) {
     setTimeout(() => {
         $('html,body').animate({ scrollTop: thisObj.closest("section").next().offset().top}, 200);
 
+        // 현재 섹션 표시
+        var currSection = Number($(thisObj).closest("section").attr('id').substring(1));
+        var nextSection = currSection + 1;
+        $('.curr-section').html(nextSection);
+        $('.bar_bar').css('width', nextSection/13*100+'%' );
+
         clicked = false;
     }, 1000);
 
@@ -125,7 +131,7 @@ $('.q li div').click(function() {
     // 선택한 질문 아이디 가져오기
     var q = $(this).closest('.q').attr("id");
     var a = $(this).attr("class");
-    console.log(q, a);
+    // console.log(q, a);
 
     // 답변 중복 선택 방지
     for (let i = 0; i < answers.length; i++) {
@@ -138,7 +144,7 @@ $('.q li div').click(function() {
     
     // 선택 기록
     answers.push({'q':q, 'a':a});
-    console.log(answers);
+    // console.log(answers);
     
     // 선택 강조
     $('#' + q + ' p').css({"opacity":0});
@@ -162,14 +168,14 @@ function getMaxValueKey(obj) {
     return Object.keys(obj).reduce((a, b) => obj[a] > obj[b] ? a : b);
 }
 // 답변별 점수 받아오기
-$.getJSON("/json/score.json", function(json) {
+$.getJSON("./json/score.json", function(json) {
     scoreChart = json;
 });
 
 // 답변 제출 액션
 function submit() {
     // 4중 택1
-    console.log(scoreChart);
+    // console.log(scoreChart);
     if (!scoreChart) {
         console.log("error: scoreChart not founded.");
         return
@@ -199,8 +205,8 @@ function submit() {
     }
 
     // 최고득점 작품 뽑기
-    console.log(scores);
-    console.log(getMaxValueKey(scores));
+    // console.log(scores);
+    // console.log(getMaxValueKey(scores));
 
     // 데이터베이스에 기록후 페이지 이동
     recordResult(answers, scores, getMaxValueKey(scores));
@@ -251,10 +257,13 @@ function markScore() {
 // 결과 제출시키기
 $('.last_q li').click(function() {
     console.log('submit');
+
     $('.wait_text h1').hide();
     setTimeout(function(){
         $('.wait_text h1').fadeIn();
     }, 2000);
+
+    $('.progress-bar').fadeOut();
 
     setTimeout(function(){
         submit();

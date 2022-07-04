@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://banzia-my-art.netlify.app/">
+    <meta property="og:title" content="예술 성향 테스트">
+    <meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/banzia-personal-art-test.appspot.com/o/img%2Fgraphic%2Ftest_profile.jpg?alt=media&token=90183e22-cc02-4107-b3ed-025cc6f4e497">
+    <meta property="og:description" content="당신은 어떤 예술 성향을 가진 사람인가요? 오직 당신을 위한 예술 작품을 찾아가세요!">
+    <meta property="og:site_name" content="예술 성향 테스트">
+    <meta name="twitter:card" content="summary" /> 
+    <meta name="twitter:title" content="예술 성향 테스트" /> 
+    <meta name="twitter:description" content="당신은 어떤 예술 성향을 가진 사람인가요? 오직 당신을 위한 예술 작품을 찾아가세요!" /> 
+    <meta name="twitter:image" content="https://firebasestorage.googleapis.com/v0/b/banzia-personal-art-test.appspot.com/o/img%2Fgraphic%2Ftest_profile.jpg?alt=media&token=90183e22-cc02-4107-b3ed-025cc6f4e497" /> 
     <title>나를 위한 작품은?</title>
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/style.css">
@@ -17,28 +27,33 @@
             <div class="work_wrap">
                 <div class="artwork">
                     <div class="bulb"></div>
-                    <h1 class="neon_text">당신을 위한 예술은?</h1>
+                    <h1 class="neon_text">당신과 맞는 예술 작품은?</h1>
                     <div class="img_wrap">
                         <img src="" alt="artwork" class="neon_img">
                         <div class="img_bg"></div>
                     </div>
                 </div>
                 <div class="desc_wrap">
+                    <div class="tag">
+                        <div class="title">
+                            <h2 class="neon_text"></h2>
+                            <h3 class="neon_text"></h3>
+                        </div>
+                        <div>
+                            <pre class="art_comment"></pre>
+                        </div>
+                    </div>
+
                     <div class="paper">
                         <div class="desc">
-                            <div class="title">
+                            <!-- <div class="title">
                                 <h2></h2>
                                 <h3></h3>
                             </div>
+                            <div>
+                                <pre class="art_comment"></pre>
+                            </div> -->
                             <ul>
-                                <!-- <li>
-                                    <div class="keyword">
-                                        <h4>Hug</h4>
-                                        <hr>
-                                        <span>🧡</span>
-                                    </div>
-                                    <p>피부가 벗겨진 채 껴 안고있는 두 존재, 그리고 그것을 바라보는 관람객까지 그 가엾은 존재들에 흡수되다.</p>
-                                </li> -->
                             </ul>
                         </div>
                         <div class="paper_bg">
@@ -91,6 +106,7 @@
                     <div class="test_menu">
                         <!-- <button class="neon_btn"><span class="neon_text">다시하기</span></button> -->
                         <a href="/"><button class="neon_btn"><span class="neon_text">다시 테스트하기</span></button></a>
+                        <a href="./arts.html"><button class="neon_btn"><span class="neon_text">모든 작품 보기</span></button></a>
                         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdCK_-EjbPC015JY9Qi__5_KWq7VnopFtbt6Z0eIeghTzwvUw/viewform" target="_blank"><button class="neon_btn"><span class="neon_text">성향테스트 피드백하기</span></button></a>
                     </div>
                 </div>
@@ -131,6 +147,7 @@
                 if ( id == artId ) {
                     const title = art.title;
                     const artKeywords = art.artKeywords;
+                    const artComment = art.artComment;
                     const artDesc = art.artDesc;
                     const artist = art.artist;
                     const artistImageUrl = art.artistImageUrl;
@@ -148,6 +165,8 @@
                         var artKeyword = `<span>#${artKeyword}</span>`;
                         $('.title h3').append(artKeyword);
                     }
+
+                    $('.art_comment').html(artComment);
 
                     for (let k = 0; k < artDesc.length; k++) {
                         const desc = artDesc[k];

@@ -4,12 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://banzia-my-art.netlify.app/">
+    <meta property="og:title" content="예술 성향 테스트">
+    <meta property="og:image" content="https://firebasestorage.googleapis.com/v0/b/banzia-personal-art-test.appspot.com/o/img%2Fgraphic%2Ftest_profile.jpg?alt=media&token=90183e22-cc02-4107-b3ed-025cc6f4e497">
+    <meta property="og:description" content="당신은 어떤 예술 성향을 가진 사람인가요? 오직 당신을 위한 예술 작품을 찾아가세요!">
+    <meta property="og:site_name" content="예술 성향 테스트">
+    <meta name="twitter:card" content="summary" /> 
+    <meta name="twitter:title" content="예술 성향 테스트" /> 
+    <meta name="twitter:description" content="당신은 어떤 예술 성향을 가진 사람인가요? 오직 당신을 위한 예술 작품을 찾아가세요!" /> 
+    <meta name="twitter:image" content="https://firebasestorage.googleapis.com/v0/b/banzia-personal-art-test.appspot.com/o/img%2Fgraphic%2Ftest_profile.jpg?alt=media&token=90183e22-cc02-4107-b3ed-025cc6f4e497" /> 
     <title>예술 성향 테스트</title>
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,200,0,0" />
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/component.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/component.css">
 </head>
 <body class="overflow-hidden">
     <div class="wrap">
@@ -21,6 +31,7 @@
                 </div>
                 <div class="start">
                     <a href="#s1"><button class="neon_btn neon_text" id="start_btn">시작하기</button></a>
+                    <a href="./arts.html"><button class="neon_btn neon_text" id="gallery_btn">모든 작품 보기</button></a>
                     <p class="participants neon_text">지금까지 총 <span></span>명이 참여했어요</p>
                     <span class="banzia">Banzia Art</span>
                 </div>
@@ -28,12 +39,16 @@
             <main>
                 <div>
                     <audio autoplay loop id="bgm">
-                        <source src="/audio/bgm.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
+                        <source src="./audio/bgm.mp3" type="audio/mpeg">
                     </audio>
                     <div class="bgm_ctrl bgm-on hide">
                         <span class="material-symbols-outlined" id="bgm-on">music_note</span>
                         <span class="material-symbols-outlined" id="bgm-off">music_off</span>
+                    </div>
+
+                    <div class="progress-bar hide">
+                        <div class="bar_background"><div class="bar_bar"></div></div>
+                        <div class="page-marker"><span class="curr-section">1</span> / 13</div>
                     </div>
             
                     <!-- <button id="submit" onclick="submit()">submit</button>
@@ -66,47 +81,45 @@
                     <section id="s1">
                         <div class="content">
                             <div class="img_wrap">
-                                <img src="/img/bg/street_1.jpg" />
+                                <img src="./img/bg/street_1.jpg" />
                             </div>
                         </div>
                         <div class="q" id="q1" data-aos="fade-up">
-                            <p>해질녘이 되어서야 일과를 마치고 걸어서 집으로 돌아가고 있다. 최근 들어 미래에 대한 불안도 커지고 내가 무슨 일을 하고 싶은 건지, 지금 하고 있는 일은 잘 하고 있는 것인지 모르겠다.<br>
-                            막연한 고민들은 잠시 접어두고 당장 집에 가서 할 일부터 계획해본다.</p>
+                            <p>지친 몸을 이끌고 집으로 돌아가는 길, 온갖 고민과 불안이 몰려온다. 애써 끝나지 않는 고민은 접어두고 집에 도착한 내 모습을 그려본다.</p>
                             <h2>Q. 집에 돌아가서 뭐하지?</h2>
                             <ul>
                                 <li><div class="ans1">침대가 최고야, 누워서 쉰다.</div></li>
-                                <li><div class="ans2">TV로 뉴스부터 틀어놓는다.</div></li>
+                                <li><div class="ans2">TV부터 틀어놓는다.</div></li>
                                 <li><div class="ans3">간만에 혼술을 한다.</div></li>
-                                <li><div class="ans4">친구와 전화로 수다를 떤다.</div></li>
+                                <li><div class="ans4">친한 친구에게 연락해본다.</div></li>
                             </ul>
                         </div>
                     </section>
                     <section id="s2">
                         <div class="content">
                             <div class="img_wrap">
-                                <img src="/img/bg/street_2.jpg" />
+                                <img src="./img/bg/street_2.jpg" />
                             </div>
                         </div>
                         <div class="q" id="q2" data-aos="fade-up">
-                            <p>집에서 할 일을 상상하니 조금은 기분이 나아졌다.<br>
-                            어느덧 집 근처 골목길까지 왔다. 골목에 들어서니 거리의 소음이 사라지고 점차 고요해진다. 집으로 돌아가는 길의 적막함을 채워줄 오늘의 BGM이 필요한 순간이다.</p>
+                            <p>집에서 할 일에 대한 생각이 끝나갈 때쯤, 어느덧 집 근처 골목길까지 왔다. 골목에 들어서니 거리의 소음이 사라지고 점차 고요해진다. 집으로 돌아가는 길의 적막함을 채워줄 오늘의 BGM이 필요한 순간이다.</p>
                             <h2>Q. 어떤 음악을 들을까?</h2>
                             <ul>
                                 <li><div class="ans1">추억에 젖게 할 레트로 음악</div></li>
                                 <li><div class="ans2">저녁에 어울리는 잔잔한 노래</div></li>
                                 <li><div class="ans3">분위기를 바꿔줄 신나는 밴드 음악</div></li>
-                                <li><div class="ans4">편안한 자연 ASMR</div></li>
+                                <li><div class="ans4">편안한 클래식 연주</div></li>
                             </ul>
                         </div>
                     </section>
                     <section id="s3">
                         <div class="content">
                             <div class="img_wrap">
-                                <img src="/img/bg/stair.jpg" />
+                                <img src="./img/bg/stair.jpg" />
                             </div>
                         </div>
                         <div class="q" id="q3" data-aos="fade-up">
-                            <p>내 플레이리스트가 끝나갈 무렵, 매일 지나던 골목 한 편에서 그동안 못 본 것인지 아니면 새로 생긴 것인지 모를 계단이 보인다. 반지하로 통하는 계단인 거 같다. 계단 아래에서 따뜻한 네온 불빛이 새어나오고 있다. 반복되는 일상에 새로움이 필요했던 건지 순전한 호기심이었는지 그 분위기에 시선이 머문다.</p>
+                            <p>틀었던 노래가 끝나갈 무렵, 매일 지나다니던 골목 한 편에서 그동안 보지 못했던 지하로 내려가는 계단이 하나 보인다. 반지하로 통하는 계단인 거 같다. 계단 아래에서 따뜻한 네온 불빛이 새어 나오고 있다.</p>
                             <h2>Q. 계단을 바라보는 당신</h2>
                             <ul>
                                 <li><div class="ans1">낯선 공간에 들어갈 생각에 긴장된다.</div></li>
@@ -119,11 +132,11 @@
                     <section id="s4">
                         <div class="content">
                             <div class="img_wrap">
-                                <img src="/img/bg/neon.jpg" />
+                                <img src="./img/bg/neon.jpg" />
                             </div>
                         </div>
                         <div class="d" data-aos="fade-up">
-                            <p>입구에 가까이 다가가니 지하로 내려가는 계단 양옆의 벽에서 은은하게 빛나는 조명이 따뜻하면서도 신비로운 느낌을 자아낸다. 계단의 끝에 있는 ‘반지하 카페’라는 네온 사인이 눈에 들어온다. 천천히 발걸음을 내딛고 한칸씩 아래로 내려간다. 오랜만에 느껴보는 두근거림이다.</p>
+                            <p>입구에 가까이 다가가니 지하로 내려가는 계단 양옆의 벽에서 은은하게 빛나는 조명이 따뜻하면서도 신비로운 느낌을 자아낸다. 계단의 끝에 있는 ‘반지하 카페’라는 네온 사인이 눈에 들어온다. 천천히 발걸음을 내딛어 한칸씩 아래로 내려간다. 오랜만에 느껴보는 두근거림이다.</p>
                             <div class="move-to-next">
                                 <p class="neon_text" data-aos="fade-in" data-aos-offset="-100" data-aos-delay="1800">터치해서 넘어가기</p>
                             </div>
@@ -132,7 +145,7 @@
                     <section id="s5">
                         <div class="content">
                             <div class="img_wrap">
-                                <img src="/img/bg/cafe_1.jpg" />
+                                <img src="./img/bg/cafe_1.jpg" />
                             </div>
                         </div>
                         <div class="q" id="q4" data-aos="fade-up">
@@ -141,7 +154,7 @@
                             <ul>
                                 <li><div class="ans1">바로 카운터로 향한다.</div></li>
                                 <li><div class="ans2">카페 구석구석을 둘러본다.</div></li>
-                                <li><div class="ans3">인스타에 올릴 사진부터 찍는다.</div></li>
+                                <li><div class="ans3">카페 사진을 찍는다.</div></li>
                                 <li><div class="ans4">일단 자리에 앉는다.</div></li>
                             </ul>
                         </div>
@@ -149,42 +162,42 @@
                     <section id="s6">
                         <div class="content">
                             <div class="img_wrap">
-                                <img src="/img/bg/cafe_1.jpg" />
+                                <img src="./img/bg/cafe_1.jpg" />
                             </div>
                         </div>
                         <div class="q img" id="q5" data-aos="fade-up">
-                            <p>카페에는 손님뿐만 아니라 바리스타나 매니저도 보이지 않아 잠시 주변을 둘러보다 벽에 걸려있는 그림 한 점이 눈에 들어온다.</p>
+                            <p>카페에 들어왔지만 사람은 아무도 보이지 않는다. 잠시 주변을 둘러보다 벽에 걸려있는 그림 한 점이 눈에 들어온다.</p>
                             <h2>Q. 가장 눈에 들어오는 그림은</h2>
                             <ul>
-                                <li><div class="ans1"><img src="/img/q/q5-1.jpg"></div></li>
-                                <li><div class="ans2"><img src="/img/q/q5-2.jpg"></div></li>
-                                <li><div class="ans3"><img src="/img/q/q5-3.jpg"></div></li>
-                                <li><div class="ans4"><img src="/img/q/q5-4.jpg"></div></li>
+                                <li><div class="ans1"><img src="./img/q/q5-1.jpg"></div></li>
+                                <li><div class="ans2"><img src="./img/q/q5-2.jpg"></div></li>
+                                <li><div class="ans3"><img src="./img/q/q5-3.jpg"></div></li>
+                                <li><div class="ans4"><img src="./img/q/q5-4.jpg"></div></li>
                             </ul>
                         </div>
                     </section>
                     <section id="s7">
                         <div class="content">
                             <div class="img_wrap">
-                                <img src="/img/bg/phone.jpg" />
+                                <img src="./img/bg/phone.jpg" />
                             </div>
                         </div>
                         <div class="q" id="q6" data-aos="fade-up">
                             <p>한동안 가만히 선채로 그림을 바라보았다. 카페의 신비로운 분위기 때문인지 그림이 나에게 어떤 말을 건내려는 것처럼 보였다. 나는 점점 그림에 빠져들어갔다.<br>
-                            그때 주머니에서 진동이 울렸다. 애인의 문자다.</p>
+                            그때 주머니에서 진동이 울렸다. 내일 만나기로 한 친구의 문자다.</p>
                             <h2>Q. 주말에 영화보고 나서 하고 싶은 거 있어?</h2>
                             <ul>
                                 <li><div class="ans1">날씨도 좋은데 밖에서 신나게 놀고 싶다.</div></li>
                                 <li><div class="ans2">맛있는 거 먹고 싶다.</div></li>
                                 <li><div class="ans3">사람 없는 곳 가서 한적하게 있고 싶어.</div></li>
-                                <li><div class="ans4">난 우주로 가고 싶어</div></li>
+                                <li><div class="ans4">영화도 좋은데.. 난 바다 보러 가고 싶다..</div></li>
                             </ul>
                         </div>
                     </section>
                     <section id="s8">
                         <div class="content">
                             <div class="img_wrap">
-                                <img src="/img/bg/bar_2.jpg" />
+                                <img src="./img/bg/bar_2.jpg" />
                             </div>
                         </div>
                         <div class="q" id="q7" data-aos="fade-up">
@@ -203,7 +216,7 @@
                     <section id="s9">
                         <div class="content">
                             <div class="img_wrap">
-                                <img src="/img/bg/bar_2.jpg" />
+                                <img src="./img/bg/bar_2.jpg" />
                             </div>
                         </div>
                         <div class="q" id="q8" data-aos="fade-up">
@@ -213,14 +226,14 @@
                                 <li><div class="ans1">“데킬라 원 샷!”</div></li>
                                 <li><div class="ans2">“맥주로 부탁드릴게요!”</div></li>
                                 <li><div class="ans3">“커피가 좋겠어요.”</div></li>
-                                <li><div class="ans4">“마실건 괜찮습니다.”</div></li>
+                                <li><div class="ans4">“물 한 잔만 주세요.”</div></li>
                             </ul>
                         </div>
                     </section>
                     <section id="s10">
                         <div class="content">
                             <div class="img_wrap">
-                                <img src="/img/bg/menu.jpg" />
+                                <img src="./img/bg/menu.jpg" />
                             </div>
                         </div>
                         <div class="d" data-aos="fade-up">
@@ -233,7 +246,7 @@
                     <section id="s11">
                         <div class="content">
                             <div class="img_wrap">
-                                <img src="/img/bg/wooden-pattern.jpg " />
+                                <img src="./img/bg/wooden-pattern.jpg " />
                             </div>
                         </div>
                         <div class="menu">
@@ -336,7 +349,7 @@
                     <section id="s12">
                         <div class="content">
                             <div class="img_wrap">
-                                <img src="/img/bg/cafe_2.jpg" />
+                                <img src="./img/bg/cafe_2.jpg" />
                             </div>
                         </div>
                         <div class="d" data-aos="fade-up">
@@ -349,7 +362,7 @@
                     <section id="s13">
                         <div class="content">
                             <div class="img_wrap">
-                                <img src="/img/bg/phone.jpg" />
+                                <img src="./img/bg/phone.jpg" />
                             </div>
                         </div>
                         <div class="q last_q" id="q9" data-aos="fade-up">
@@ -357,8 +370,8 @@
                             <h2>Q. 내가 예매할 영화는</h2>
                             <ul>
                                 <li><div class="ans1">보고 싶은 영화가 없다. 아무 영화나 고른다.</div></li>
-                                <li><div class="ans2">힐링 영화를 본다.</div></li>
-                                <li><div class="ans3">공포 영화를 본다.</div></li>
+                                <li><div class="ans2">잔잔한 휴식이 필요해. 로맨스 영화를 본다.</div></li>
+                                <li><div class="ans3">여름엔 역시 시원한 액션이지. 액션 영화를 본다.</div></li>
                                 <li><div class="ans4">어렸을 때 봤던 재개봉한 영화를 본다.</div></li>
                             </ul>
                         </div>
@@ -424,13 +437,13 @@
     </script> -->
 
     <!-- Checkbox -->
-    <script src="/js/svgcheckbx.js"></script>
+    <script src="./js/svgcheckbx.js"></script>
     
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
-    <script src="/js/firebase.js"></script>
+    <script src="./js/firebase.js"></script>
 
-    <script src="/js/index.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>
