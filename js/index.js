@@ -256,7 +256,7 @@ function markScore() {
 
 // 결과 제출시키기
 $('.last_q li').click(function() {
-    console.log('submit');
+    // console.log('submit');
 
     $('.wait_text h1').hide();
     setTimeout(function(){
