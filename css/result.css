@@ -8,6 +8,7 @@ body {
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
+    height: inherit;
 }
 body {
     overflow: auto;

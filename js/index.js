@@ -92,7 +92,7 @@ function moveToNextSection(thisObj) {
     
     // 섹션 이동
     setTimeout(() => {
-        $('html,body').animate({ scrollTop: thisObj.closest("section").next().offset().top}, 200);
+        $('html, body, .content').animate({ scrollTop: thisObj.closest("section").next().offset().top}, 200);
 
         // 현재 섹션 표시
         var currSection = Number($(thisObj).closest("section").attr('id').substring(1));

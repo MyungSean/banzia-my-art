@@ -10,6 +10,7 @@
     scroll-behavior: smooth;
     box-sizing: border-box;
 }
+
 body {
     background-color: #1F150C;
     display: flex;
@@ -17,30 +18,40 @@ body {
     justify-content: center;
     max-width: var(--max-width);
     margin: 0 auto;
+    height: 100vh;
 }
 body.overflow-hidden {
     overflow: hidden;
 }
+
+/* 레이아웃 */
+.wrap {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+}
 body > .wrap > .content {
     flex-grow: 1;
-    height: calc(100vh - var(--ad-bottom-height));
+    overflow: hidden;
 }
+body .ad-bottom {
+    flex-grow: 0;
+    flex-basis: var(--ad-bottom-height);
+}
+
 /* 광고 */
 .ad-bottom {
-    position: fixed;
-    bottom: 0;
     width: 100%;
-    height: var(--ad-bottom-height);
     max-width: var(--max-width);
     background-color: #1F150C;
 }
 .bottom-cover {
-    position: fixed;
+    /* position: fixed;
     bottom: 0;
     width: 100%;
     height: var(--ad-bottom-height);
     max-width: var(--max-width);
-    background-color: #1F150C;
+    background-color: #1F150C; */
 }
 
 header {
@@ -59,7 +70,6 @@ section {
     display: none;
     position: relative;
     height: 100%;
-    overflow: hidden;
 }
 section:first-child {
     /* display: block; */
@@ -71,6 +81,7 @@ section.loading_section {
 .bumper {
     height: var(--ad-bottom-height);
 }
+
 
 .neon_text {
     color: rgb(255, 255, 238);
